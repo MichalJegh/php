@@ -1,6 +1,8 @@
 <?php
 session_start();
 ?>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 <?php
 if(empty($_SESSION["jazyk"]))
 {
@@ -17,8 +19,9 @@ if(empty($_SESSION["jazyk"]))
 //}
 var_dump($_SESSION["jazyk"]);
 ?>
-<a href=index.php?jazyk=SK>SLOVENSKY</a>
-<a href=index.php?jazyk=EN>ANGLICKY</a>
+
+<a href=index.php?jazyk=sk>sk</a>
+<a href=index.php?jazyk=en>en</a>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -58,7 +61,15 @@ $rozvrh[4][7] = "NIČ";
 $dni = array("Pondelok", "Utorok", "Streda", "Stvrtok", "Pondelok");
 $hodiny = array(0, 1, 2, 3, 4, 5,6,7);
 ?>
-<table border=1>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title> tabulka</title>
+</head>
+</html>
+
+<table border=1 class="table">
     <tr>
         <td>DEN</td>
         <? foreach ($hodiny as $i => $hodina): ?>
